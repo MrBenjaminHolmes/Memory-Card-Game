@@ -1,5 +1,5 @@
 import spongebob from "../assets/background.jpg";
-import "../App.css";
+import "../styles/Background.css";
 
 export default function TvScreen() {
   return (
