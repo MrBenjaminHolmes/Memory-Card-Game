@@ -1,14 +1,12 @@
 import "../styles/App.css";
 import TvScreen from "./TvScreen";
-import Card from "./card";
+import CardContainer from "./cardContainer";
 
 function App() {
   return (
     <>
       <TvScreen />
-      <div className="card-wrapper">
-        <Card />
-      </div>
+      <CardContainer />
     </>
   );
 }

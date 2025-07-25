@@ -1,4 +1,4 @@
-.card-wrapper {
+#card-container {
   position: relative;
   z-index: 1;
 }
