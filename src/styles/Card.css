@@ -1,0 +1,85 @@
+/* Cards.css */
+
+#center-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#card-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+
+  width: 50%;
+  z-index: 1;
+}
+
+.card {
+  width: 180px;
+  height: 280px;
+  background-image: url("../assets/cardBg.png");
+  background-size: cover;
+  background-position: center;
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  display: flex;
+  flex-direction: column;
+  border: medium solid rgb(233, 233, 233);
+  align-items: center;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.07) rotate(3deg) skewY(1deg);
+  box-shadow: 0 20px 40px rgba(0, 150, 255, 0.5),
+    0 0 15px rgba(0, 150, 255, 0.7);
+  z-index: 10;
+}
+
+.card > img {
+  transform: scale(0.9);
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  transition: transform 0.6s ease;
+}
+
+.card:hover > img {
+  transform: scale(1.05);
+}
+
+.card > img {
+  scale: 0.9;
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  transition: 1s all ease-in-out;
+}
+.card > img:hover {
+  transform: scale(1.05);
+}
+
+.card-img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+
+.card-name {
+  font-size: 1.2rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.836);
+  font-weight: 600;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+}

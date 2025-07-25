@@ -10,15 +10,16 @@ import sandy from "../assets/characters/sandy.webp";
 import plankton from "../assets/characters/plankton.webp";
 
 const images = [
-  spongebob,
-  patrick,
-  squidward,
-  mrkrabs,
-  gary,
-  karen,
-  mrspuff,
-  pearl,
-  sandy,
-  plankton,
+  { name: "SpongeBob", image: spongebob },
+  { name: "Patrick", image: patrick },
+  { name: "Squidward", image: squidward },
+  { name: "Mr. Krabs", image: mrkrabs },
+  { name: "Gary", image: gary },
+  { name: "Karen", image: karen },
+  { name: "Mrs. Puff", image: mrspuff },
+  { name: "Pearl", image: pearl },
+  { name: "Sandy", image: sandy },
+  { name: "Plankton", image: plankton },
 ];
+
 export default images;
