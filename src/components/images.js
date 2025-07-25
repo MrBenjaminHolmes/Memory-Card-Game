@@ -9,5 +9,16 @@ import pearl from "../assets/characters/pearl.webp";
 import sandy from "../assets/characters/sandy.webp";
 import plankton from "../assets/characters/plankton.webp";
 
-const images = [spongebob];
+const images = [
+  spongebob,
+  patrick,
+  squidward,
+  mrkrabs,
+  gary,
+  karen,
+  mrspuff,
+  pearl,
+  sandy,
+  plankton,
+];
 export default images;
