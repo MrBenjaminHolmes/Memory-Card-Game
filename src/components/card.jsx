@@ -1,7 +1,8 @@
 export default function Card({ imgSrc }) {
   return (
     <div className="card">
-      <img src={imgSrc} />
+      <img className="card-img" src={imgSrc} />
+      <h3 className="card-name">Spongebob</h3>
     </div>
   );
 }
