@@ -10,15 +10,21 @@
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr)); /* prevents overflow */
+  gap: 16px;
 
-  width: 50%;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
   z-index: 1;
 }
 
 .card {
-  width: 180px;
-  height: 280px;
+  width: 100%;
+  aspect-ratio: 5 / 8;
+  max-width: 200px;
   background-image: url("../assets/cardBg.png");
   background-size: cover;
   background-position: center;
@@ -32,7 +38,6 @@
   flex-direction: column;
   border: medium solid rgb(233, 233, 233);
   align-items: center;
-  margin: 10px;
   cursor: pointer;
 }
 
@@ -73,7 +78,7 @@
 }
 
 .card-name {
-  font-size: 1.2rem;
+  font-size: 1.1.2vh;
   color: #ffffff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.836);
   font-weight: 600;

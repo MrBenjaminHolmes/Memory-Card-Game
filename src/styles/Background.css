@@ -42,16 +42,16 @@ body,
 
   box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 0, 0, 0.4);
 
-  animation: flicker 0.2s infinite alternate;
+  animation: flicker 0.5s infinite alternate;
   position: relative;
   overflow: hidden;
 }
 @keyframes flicker {
   0% {
-    filter: brightness(1.15) contrast(1.05);
+    filter: brightness(0.65) contrast(1.05);
   }
   100% {
-    filter: brightness(1.1) contrast(1.1);
+    filter: brightness(0.61) contrast(1.1);
   }
 }
 
