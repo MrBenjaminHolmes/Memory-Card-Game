@@ -8,7 +8,10 @@ import mrspuff from "../assets/characters/mrsPuff.webp";
 import pearl from "../assets/characters/pearl.webp";
 import sandy from "../assets/characters/sandy.webp";
 import plankton from "../assets/characters/plankton.webp";
-
+import larry from "../assets/characters/larry.webp";
+import flyingDutchman from "../assets/characters/dutchman.webp";
+import manray from "../assets/characters/manray.webp";
+import mermaidman from "../assets/characters/mermaidman.webp";
 const images = [
   { name: "SpongeBob", image: spongebob },
   { name: "Patrick", image: patrick },
@@ -20,6 +23,10 @@ const images = [
   { name: "Pearl", image: pearl },
   { name: "Sandy", image: sandy },
   { name: "Plankton", image: plankton },
+  { name: "Larry", image: larry },
+  { name: "Flying Dutchman", image: flyingDutchman },
+  { name: "Manray", image: manray },
+  { name: "Mermaidman", image: mermaidman },
 ];
 
 export default images;

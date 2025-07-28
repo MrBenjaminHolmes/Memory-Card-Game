@@ -1,7 +1,9 @@
 export default function Card({ imgSrc, onClick }) {
   return (
     <div className="card" onClick={onClick}>
-      <img className="card-img" src={imgSrc.image} />
+      <div className="card-img">
+        <img src={imgSrc.image} alt={imgSrc.name} />
+      </div>
       <h3 className="card-name">{imgSrc.name}</h3>
     </div>
   );

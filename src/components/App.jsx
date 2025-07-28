@@ -4,8 +4,20 @@ import TvScreen from "./TvScreen";
 import images from "./images";
 import CardContainer from "./cardContainer";
 import Score from "./Score";
-import { shuffle } from "./gameLogic";
 import { useState } from "react";
+
+function shuffle(array) {
+  let m = array.length,
+    t,
+    i;
+  while (m) {
+    i = Math.floor(Math.random() * m--);
+    t = array[m];
+    array[m] = array[i];
+    array[i] = t;
+  }
+  return array;
+}
 
 function App() {
   const [score, setScore] = useState(0);
