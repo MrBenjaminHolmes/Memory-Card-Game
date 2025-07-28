@@ -9,7 +9,7 @@ export default function Difficulty({ difficulty, changeFunction }) {
         id="slider"
         type="range"
         min="1"
-        max="14"
+        max="17"
         step="1"
         value={difficulty}
         onChange={(e) => changeFunction(Number(e.target.value))}

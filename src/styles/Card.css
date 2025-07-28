@@ -5,10 +5,9 @@
 }
 
 #card-container {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
   gap: 16px;
   width: 100%;
   max-width: 1200px;
@@ -17,11 +16,10 @@
   box-sizing: border-box;
   z-index: 1;
 }
-
 .card {
+  max-width: 160px;
   width: 100%;
   aspect-ratio: 5 / 8;
-  max-width: 200px;
   background-image: url("../assets/cardBg.png");
   background-size: cover;
   background-position: center;
@@ -66,7 +64,7 @@
 }
 
 .card-name {
-  font-size: 2.2vh;
+  font-size: 1.6rem;
   color: #ffffff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.836);
   font-weight: 600;

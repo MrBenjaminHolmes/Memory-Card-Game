@@ -22,7 +22,7 @@ function shuffle(array) {
 
 function App() {
   const [score, setScore] = useState(0);
-  const [difficulty, setDifficulty] = useState(7);
+  const [difficulty, setDifficulty] = useState(8);
   const [clickedList, setClickedList] = useState([]);
   const [filteredImages, setFilteredImages] = useState(shuffle([...imageData]));
   const [highScore, setHighScore] = useState(score);
