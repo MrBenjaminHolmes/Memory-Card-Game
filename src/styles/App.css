@@ -1,6 +1,11 @@
-#main-container {
+#MainContainer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  z-index: 3;
+  position: relative;
+  color: white;
 }
 .info {
   display: flex;
@@ -10,10 +15,26 @@
 }
 
 .info > h1 {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  margin: 0 auto;
+  text-align: center;
+  flex: 1;
 }
 .info > .scoreDiv {
-  margin: 25px 50px auto auto;
+  display: flex;
+  flex-direction: column;
+}
+.scoreDiv > p {
+  margin: 0px;
+}
+
+#diffMenu {
+  position: relative;
+  align-self: center;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 12px;
+  color: white;
+  margin: 0px auto;
+  width: fit-content;
 }

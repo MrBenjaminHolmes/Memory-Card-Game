@@ -1,10 +1,10 @@
 import "../styles/Card.css";
 import "../styles/App.css";
 import TvScreen from "./TvScreen";
-import images from "./images";
+import imageData from "./images";
 import CardContainer from "./cardContainer";
 import Score from "./Score";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Difficulty from "./difficulty";
 
 function shuffle(array) {
@@ -24,8 +24,26 @@ function App() {
   const [score, setScore] = useState(0);
   const [difficulty, setDifficulty] = useState(7);
   const [clickedList, setClickedList] = useState([]);
-  const [shuffledArray, setShuffledArray] = useState(shuffle([...images]));
+  const [filteredImages, setFilteredImages] = useState(shuffle([...imageData]));
   const [highScore, setHighScore] = useState(score);
+
+  function onDifficultyChange(diff) {
+    setScore(0);
+    setDifficulty(diff);
+
+    let newImages = [...imageData];
+
+    const itemsToRemove = newImages.length - diff;
+
+    for (let i = 0; i < itemsToRemove; i++) {
+      const randomIndex = Math.floor(Math.random() * newImages.length);
+      newImages.splice(randomIndex, 1);
+    }
+
+    setClickedList([]);
+    setFilteredImages(shuffle(newImages));
+  }
+
   function handleCardClick(card) {
     if (clickedList.includes(card)) {
       setScore(0);
@@ -39,8 +57,11 @@ function App() {
 
       setClickedList((prev) => [...prev, card]);
     }
-    setShuffledArray(shuffle([...images]));
+    setFilteredImages(shuffle([...filteredImages]));
   }
+  useEffect(() => {
+    onDifficultyChange(difficulty);
+  }, []);
 
   return (
     <>
@@ -50,8 +71,11 @@ function App() {
           <h1>Spongebob Memory Game</h1>
           <Score score={score} highScore={highScore} />
         </div>
-        <Difficulty difficulty={difficulty} setDifficulty={setDifficulty} />
-        <CardContainer cards={shuffledArray} handleClick={handleCardClick} />
+        <Difficulty
+          difficulty={difficulty}
+          changeFunction={onDifficultyChange}
+        />
+        <CardContainer cards={filteredImages} handleClick={handleCardClick} />
       </div>
     </>
   );
