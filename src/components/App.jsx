@@ -5,6 +5,7 @@ import images from "./images";
 import CardContainer from "./cardContainer";
 import Score from "./Score";
 import { useState } from "react";
+import Difficulty from "./difficulty";
 
 function shuffle(array) {
   let m = array.length,
@@ -21,6 +22,7 @@ function shuffle(array) {
 
 function App() {
   const [score, setScore] = useState(0);
+  const [difficulty, setDifficulty] = useState(7);
   const [clickedList, setClickedList] = useState([]);
   const [shuffledArray, setShuffledArray] = useState(shuffle([...images]));
   const [highScore, setHighScore] = useState(score);
@@ -48,7 +50,7 @@ function App() {
           <h1>Spongebob Memory Game</h1>
           <Score score={score} highScore={highScore} />
         </div>
-
+        <Difficulty difficulty={difficulty} setDifficulty={setDifficulty} />
         <CardContainer cards={shuffledArray} handleClick={handleCardClick} />
       </div>
     </>
