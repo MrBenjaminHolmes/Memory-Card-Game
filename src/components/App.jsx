@@ -68,11 +68,15 @@ function App() {
       <TvScreen />
       <div id="MainContainer">
         <div className="info">
-          <h1>Spongebob Memory Game</h1>
-          <Difficulty
-            difficulty={difficulty}
-            changeFunction={onDifficultyChange}
-          />
+          <div class="left-group">
+            <h1>Spongebob Memory Game</h1>
+
+            <Difficulty
+              difficulty={difficulty}
+              changeFunction={onDifficultyChange}
+            />
+          </div>
+
           <Score score={score} highScore={highScore} />
         </div>
 

@@ -1,13 +1,15 @@
-/*App.css*/
+/* App.css */
+
 #MainContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 40px;
-  z-index: 3;
   position: relative;
+  z-index: 3;
   color: white;
 }
+
 .info {
   display: flex;
   justify-content: space-between;
@@ -18,22 +20,52 @@
 .info > h1 {
   text-align: center;
 }
+
 .info > .scoreDiv {
   display: flex;
   flex-direction: column;
 }
+
 .scoreDiv > p {
-  margin: 0px;
+  margin: 0;
 }
 
+h1,
 #diffMenu {
   position: relative;
   align-self: center;
   z-index: 3;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 20px;
-  border-radius: 12px;
-  color: white;
-  margin: 0px auto;
+  background-color: #1e1e1e;
+  padding: 16px 24px;
+  border-radius: 10px;
+  color: #ffffff;
+  margin: 0 auto;
   width: fit-content;
+  border: 1px solid #333;
+}
+
+.scoreDiv {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto; /* pushes it to the right */
+  position: relative;
+  z-index: 3;
+  background-color: #1e1e1e;
+  padding: 16px 24px;
+  border-radius: 10px;
+  color: #ffffff;
+  width: fit-content;
+  border: 1px solid #333;
+}
+
+.scoreDiv {
+  margin-left: auto;
+}
+
+.left-group {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
 }
