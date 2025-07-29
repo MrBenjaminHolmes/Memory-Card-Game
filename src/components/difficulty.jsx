@@ -1,7 +1,6 @@
 export default function Difficulty({ difficulty, changeFunction }) {
   return (
     <div id="diffMenu">
-      <h2>Select a Difficulty</h2>
       <label htmlFor="slider" className="block text-lg font-medium mb-2">
         Difficulty Level: {difficulty}
       </label>

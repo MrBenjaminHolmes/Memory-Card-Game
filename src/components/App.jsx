@@ -69,12 +69,13 @@ function App() {
       <div id="MainContainer">
         <div className="info">
           <h1>Spongebob Memory Game</h1>
+          <Difficulty
+            difficulty={difficulty}
+            changeFunction={onDifficultyChange}
+          />
           <Score score={score} highScore={highScore} />
         </div>
-        <Difficulty
-          difficulty={difficulty}
-          changeFunction={onDifficultyChange}
-        />
+
         <CardContainer cards={filteredImages} handleClick={handleCardClick} />
       </div>
     </>
