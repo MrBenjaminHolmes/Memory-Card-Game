@@ -82,7 +82,7 @@ h1,
   .info > .scoreDiv {
     margin: 1rem auto !important;
     align-self: center;
-    width: 100%;
+    width: 70%;
     max-width: 320px;
     text-align: center;
   }
